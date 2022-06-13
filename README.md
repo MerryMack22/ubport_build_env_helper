@@ -4,6 +4,11 @@ Sets up ubports build environment using docker-compose so the build environment 
 This was created because I was having trouble with dependencies setting up my build environment so I decided this was better/quicker
 than fighting in the dependency nonsense.
 
+This Docker setup creates a container with the appropriate build environment for building an Ubuntu Touch port. This also links to
+the location specified in your environment file so that the files created and needed by the build environment are local to your host
+machine, this allows for portability of the created files as well as easier editing and flashing than if they were trapped inside the container.
+
+# Usage
 When you clone this repo, be sure to change the <code>.env.example</code> file into a regular <code>.env</code>
 file. Also be sure to update the path in your <code>.env</code> to reflect the location you've cloned the repo to.
 
