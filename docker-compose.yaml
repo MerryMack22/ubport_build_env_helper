@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+
+  build_machine:
+    container_name: ubport_build_machine
+    hostname: ubport_build_machine
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+    - ${LOCAL_CONTAINER_DIR}:/build/sources
+    stdin_open: true
+    tty: true
